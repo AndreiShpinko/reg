@@ -1,0 +1,141 @@
+form {
+  margin-top: 50px;
+}
+.input-wrap {
+  position: relative;
+}
+.input {
+  display: block;
+  border: none;
+  background-color: #fff;
+  line-height: 1.2;
+  width: 600px;
+  font-size: 1.8rem;
+  transition: 0.3s;
+  border-bottom: 1px solid #000;
+  padding-right: 50px;
+}
+.content__subtitle {
+  margin-top: 30px;
+}
+.content .btn {
+  font-size: 1.8rem;
+  max-width: 150px;
+  width: 100%;
+}
+.content .btn--blue {
+  margin-top: 50px;
+}
+.btn--white {
+  margin-top: 30px;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  font-weight: 500;
+}
+.btn--white:hover {
+  border: 2px solid #7a0bbf;
+}
+/* === cross === */
+
+.cross {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  opacity: 0;
+}
+.cross:before,
+.cross:after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  border-radius: 1px;
+  position: absolute;
+  background-color: #c11717;
+}
+.cross:before {
+  transform: rotate(45deg);
+}
+.cross:after {
+  transform: rotate(-45deg);
+}
+
+
+
+.check {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  right: 8px;
+  bottom: 0;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  margin-right: -8px;
+  opacity: 0;
+}
+.check:before,
+.check:after {
+  content: "";
+  height: 3px;
+  border-radius: 1px;
+  position: absolute;
+  background-color: #26B31A;
+}
+.check:before {
+  width: 40%;
+  transform: rotate(50deg);
+  margin-top: 10px;
+}
+.check:after {
+  width: 80%;
+  transform: rotate(-50deg);
+  margin-left: 7px;
+}
+
+/* === /cross === */
+
+.input-wrap.green .input {
+  border-bottom: 1px solid #c11717;
+}
+.input-wrap.green .cross {
+  opacity: 1;
+}
+.input-wrap.green .check {
+  opacity: 0;
+}
+
+
+
+.input-wrap.red .input {
+  border-bottom: 1px solid #26B31A;
+}
+.input-wrap.red .cross {
+  opacity: 0;
+}
+.input-wrap.red .check {
+  opacity: 1;
+}
+
+
+
+@media (max-width: 767px) {
+  .input {
+    width: 420px;
+  }
+}
+@media (max-width: 480px) {
+  .input {
+    width: 300px;
+  }
+  .btn--white {
+    margin-top: 15px;
+  }
+}
